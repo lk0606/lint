@@ -1,0 +1,38 @@
+{
+    "name": "eslint-config-vue3-jsx",
+    "version": "0.0.1",
+    "files": [
+        "index.js",
+        "README.md",
+        "package.json"
+    ],
+    "main": "index.js",
+    "keywords": [
+        "vue3",
+        "eslint",
+        "eslint-config",
+        "eslint-config-vue3-jsx"
+    ],
+    "dependencies": {
+        "eslint-config-airbnb-typescript": "^12.0.0",
+        "eslint-plugin-vue3-jsx": "^0.0.1"
+    },
+    "devDependencies": {
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-react": "^7.22.0",
+        "eslint-plugin-react-hooks": "^4.2.0"
+    },
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/",
+        "access": "public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lk0606/eslint-vue3-jsx"
+    },
+    "author": {
+        "name": "bantang",
+        "email": "919590347@qq.com"
+    }
+}
