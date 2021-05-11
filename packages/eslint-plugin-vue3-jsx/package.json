@@ -1,0 +1,31 @@
+{
+    "name": "eslint-plugin-vue3-jsx",
+    "version": "0.0.1",
+    "files": [
+        "configs",
+        "rules",
+        "index.js",
+        "README.md",
+        "package.json"
+    ],
+    "main": "index.js",
+    "description": "Eslint for vue3, which using tsx",
+    "keywords": [
+        "vue3",
+        "eslint",
+        "eslint-plugin",
+        "eslint-plugin-vue3-jsx"
+    ],
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/",
+        "access": "public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lk0606/eslint-vue3-jsx"
+    },
+    "author": {
+        "name": "bantang",
+        "email": "919590347@qq.com"
+    }
+}
