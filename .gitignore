@@ -1,9 +1,5 @@
 
 # build
-docs
-dist
-lib
-es
 
 # local env files
 *.local
