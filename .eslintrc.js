@@ -9,6 +9,6 @@ module.exports = {
         'comma-dangle': 'off',
         indent: 'off',
         semi: 'off',
-        '@typescript-eslint/explicit-module-boundary-types': 'off',
+        '@typescript-eslint/explicit-module-boundary-types': 0,
     },
 };

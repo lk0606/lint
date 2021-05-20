@@ -9,7 +9,7 @@
         "package.json"
     ],
     "main": "index.js",
-    "description": "Eslint for vue3, which using tsx",
+    "description": "Eslint for vue3, which using jsx",
     "keywords": [
         "vue3",
         "eslint",
