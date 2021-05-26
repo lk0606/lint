@@ -3,7 +3,7 @@ const allowedDirectives = [
     'v-slots',
     'v-model',
     'v-models',
-    // 'v-show'
+    'v-show',
 ];
 
 module.exports = {
@@ -14,15 +14,17 @@ module.exports = {
         return {
             JSXAttribute: function (node) {
                 if (node.name && node.name.name) {
+                    const name = node.name.name
+                    const isCustomDirective = /^(v-custom)[A-Z]+[a-z]+$/.test(name)
+                    const errMsg = `Directive ${name} is not supported in JSX`
                     if (
-                        node.name.name.startsWith('v-') &&
-                        !allowedDirectives.includes(node.name.name)
+                        name.startsWith('v-') &&
+                        !allowedDirectives.includes(name) &&
+                        !isCustomDirective
                     ) {
                         context.report(
                             node,
-                            ['v-model', 'v-models'].includes(node.name.name)
-                                ? `${node.name.name} is not recommended, use controlled inputs instead`
-                                : `Directive ${node.name.name} is not supported in JSX`,
+                            errMsg,
                         );
                     }
                 }
