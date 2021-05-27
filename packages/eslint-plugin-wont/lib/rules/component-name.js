@@ -25,10 +25,10 @@ module.exports = {
         },
     },
 
-    create: function(context) {
+    create(context) {
         return {
             'CallExpression[callee.name="defineComponent"]>ObjectExpression': function (node) {
-                const properties = node.properties;
+                const {properties} = node;
                 if (Array.isArray(properties)) {
                     for (const p of properties) {
                         if (p.key && p.key.name === 'name') {

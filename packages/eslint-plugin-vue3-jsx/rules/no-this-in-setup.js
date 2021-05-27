@@ -2,7 +2,7 @@ module.exports = {
     meta: {
         type: 'problem',
     },
-    create (context) {
+    create(context) {
         return {
             'CallExpression[callee.name="defineComponent"] Property[key.name="setup"] ThisExpression':
                 function (node) {

@@ -4,11 +4,11 @@ module.exports = {
     meta: {
         type: 'suggestion',
     },
-    create (context) {
+    create(context) {
         return {
-            JSXAttribute (node) {
+            JSXAttribute(node) {
                 if (node.name && node.name.name) {
-                    const {name} = node.name
+                    const { name } = node.name
                     const isCustomDirective = /^(v-custom)[A-Z]+[a-z]+$/.test(
                         name
                     )

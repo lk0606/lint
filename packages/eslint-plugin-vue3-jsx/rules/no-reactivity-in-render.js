@@ -20,7 +20,7 @@ module.exports = {
     meta: {
         type: 'suggestion',
     },
-    create (context) {
+    create(context) {
         return {
             'CallExpression[callee.name="defineComponent"] Property[key.name="setup"] ReturnStatement CallExpression':
                 function (node) {

@@ -16,7 +16,7 @@
         "node": ">=10.0.0"
     },
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     },
     "lint-staged": {
         "*.{jsx,js,tsx,ts,md,mdx,css,less,html}": [

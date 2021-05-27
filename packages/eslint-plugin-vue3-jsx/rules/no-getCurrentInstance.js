@@ -2,9 +2,9 @@ module.exports = {
     meta: {
         type: 'problem',
     },
-    create (context) {
+    create(context) {
         return {
-            ImportDeclaration (node) {
+            ImportDeclaration(node) {
                 if (node.source.value === 'vue') {
                     if (node.specifiers && Array.isArray(node.specifiers)) {
                         // context.report(node, 'Do not use getCurrentInstance')

@@ -3,10 +3,12 @@
  * @author bantang
  */
 "use strict";
-var rule = require("../../../lib/rules/component-name"),
-    RuleTester = require("../../../lib/testers/rule-tester");
 
-var ruleTester = new RuleTester();
+const rule = require("../../../lib/rules/component-name")
+const { RuleTester } = require("eslint")
+
+const ruleTester = new RuleTester()
+
 ruleTester.run("component-name", rule, {
     valid: [
         {
@@ -39,7 +41,12 @@ ruleTester.run("component-name", rule, {
             `,
             errors: [{
                 messageId: "componentNameNeeded",
-            }]
+            }],
+            parserOptions: {
+                ecmaFeatures: {
+                jsx: true,
+                },
+            },
         }
     ]
 });

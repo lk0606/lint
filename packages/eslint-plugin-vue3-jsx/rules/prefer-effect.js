@@ -11,11 +11,11 @@ module.exports = {
     meta: {
         type: 'suggestion',
     },
-    create (context) {
+    create(context) {
         return {
             'CallExpression[callee.name="defineComponent"] Property[key.name="setup"] FunctionExpression':
                 function (node) {
-                    const {body} = node
+                    const { body } = node
 
                     if (Array.isArray(body)) {
                         body.forEach((s) => {
