@@ -1,6 +1,6 @@
-# eslint-plugin-wont
+# eslint-plugin-vue3-jsx
 
-Eslint plugin for wont
+Eslint plugin for vue3-jsx
 
 ## Installation
 
@@ -10,10 +10,10 @@ You'll first need to install [ESLint](http://eslint.org):
 $ npm i eslint --save-dev
 ```
 
-Next, install `eslint-plugin-wont`:
+Next, install `eslint-plugin-vue3-jsx`:
 
 ```
-$ npm install eslint-plugin-wont --save-dev
+$ npm install eslint-plugin-vue3-jsx --save-dev
 ```
 
 ## Usage
@@ -22,7 +22,7 @@ Add `wont` to the plugins section of your `.eslintrc` configuration file. You ca
 
 ```json
 {
-    "plugins": ["wont"]
+    "plugins": ["vue3-jsx"]
 }
 ```
 
@@ -31,11 +31,11 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "wont/rule-name": 2
+        "vue3-jsx/component-name": 2
     }
 }
 ```
 
 ## Supported Rules
 
--   Fill in provided rules here
+-   component-name
