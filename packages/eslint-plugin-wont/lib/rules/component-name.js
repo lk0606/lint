@@ -14,7 +14,7 @@ module.exports = {
     meta: {
         docs: {
             description: "vue component name needed",
-            category: "vue",
+            category: "vue3-jsx",
             recommended: true,
             url,
         },
