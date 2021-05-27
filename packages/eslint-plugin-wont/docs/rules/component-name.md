@@ -1,36 +1,41 @@
 # vue component name needed (component-name)
 
-Please describe the origin of the rule here.
+component name needed.
 
 
 ## Rule Details
 
-This rule aims to...
+This rule aims to ensure component name exist for VUE global registration or more...
 
 Examples of **incorrect** code for this rule:
 
-```js
+```jsx
+import { defineComponent } from 'vue'
 
-// fill me in
-
+export default defineComponent({
+    name: 'ComponentNameNeeded',
+    setup() {
+        return ()=> {
+            return <section>component name needed</section>
+        }
+    }
+})
 ```
 
 Examples of **correct** code for this rule:
 
-```js
+```jsx
+import { defineComponent } from 'vue'
 
-// fill me in
-
+export default defineComponent({
+    setup() {
+        return ()=> {
+            return <section>component name needed</section>
+        }
+    }
+})
 ```
-
-### Options
-
-If there are any options, describe them here. Otherwise, delete this section.
 
 ## When Not To Use It
 
-Give a short description of when it would be appropriate to turn off this rule.
-
-## Further Reading
-
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
+When you think is not necessary, and disagree the Rule Details
