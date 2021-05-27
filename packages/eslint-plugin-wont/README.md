@@ -16,19 +16,15 @@ Next, install `eslint-plugin-wont`:
 $ npm install eslint-plugin-wont --save-dev
 ```
 
-
 ## Usage
 
 Add `wont` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
 
 ```json
 {
-    "plugins": [
-        "wont"
-    ]
+    "plugins": ["wont"]
 }
 ```
-
 
 Then configure the rules you want to use under the rules section.
 
@@ -42,9 +38,4 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-* Fill in provided rules here
-
-
-
-
-
+-   Fill in provided rules here

@@ -1,40 +1,40 @@
 {
-  "name": "eslint-plugin-vue3-jsx",
-  "version": "0.0.3",
-  "description": "Eslint plugin for vue3-jsx",
-  "keywords": [
-    "vue3",
-    "vue3-jsx",
-    "eslint",
-    "eslintplugin",
-    "eslint-plugin",
-    "eslint-plugin-vue3-jsx"
-  ],
-  "main": "lib/index.js",
-  "scripts": {
-    "test": "mocha tests --recursive"
-  },
-  "dependencies": {
-    "requireindex": "~1.1.0"
-  },
-  "devDependencies": {
-    "eslint": "^7.1.0",
-    "mocha": "^7.2.0"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lk0606/eslint-vue3-jsx"
-  },
-  "author": {
-    "name": "bantang",
-    "email": "919590347@qq.com"
-  },
-  "license": "MIT"
+    "name": "eslint-plugin-vue3-jsx",
+    "version": "0.0.3",
+    "description": "Eslint plugin for vue3-jsx",
+    "keywords": [
+        "vue3",
+        "vue3-jsx",
+        "eslint",
+        "eslintplugin",
+        "eslint-plugin",
+        "eslint-plugin-vue3-jsx"
+    ],
+    "main": "lib/index.js",
+    "scripts": {
+        "test": "mocha tests --recursive"
+    },
+    "dependencies": {
+        "requireindex": "~1.1.0"
+    },
+    "devDependencies": {
+        "eslint": "^7.1.0",
+        "mocha": "^7.2.0"
+    },
+    "engines": {
+        "node": ">=0.10.0"
+    },
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/",
+        "access": "public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lk0606/eslint-vue3-jsx"
+    },
+    "author": {
+        "name": "bantang",
+        "email": "919590347@qq.com"
+    },
+    "license": "MIT"
 }

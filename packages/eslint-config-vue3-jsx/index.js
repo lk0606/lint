@@ -1,10 +1,10 @@
 const a11yOff = Object.keys(require('eslint-plugin-jsx-a11y').rules).reduce(
     (acc, rule) => {
-        acc[`jsx-a11y/${rule}`] = 'off';
-        return acc;
+        acc[`jsx-a11y/${rule}`] = 'off'
+        return acc
     },
-    {},
-);
+    {}
+)
 
 module.exports = {
     extends: ['airbnb-typescript', 'plugin:vue3-jsx/recommended'],
@@ -31,4 +31,4 @@ module.exports = {
             version: '16.9',
         },
     },
-};
+}

@@ -2,17 +2,17 @@ module.exports = {
     meta: {
         type: 'problem',
     },
-    create: function (context) {
+    create (context) {
         return {
-            ImportDeclaration: function (node) {
+            ImportDeclaration (node) {
                 if (node.source.value === 'vue') {
                     if (node.specifiers && Array.isArray(node.specifiers)) {
                         // context.report(node, 'Do not use getCurrentInstance')
-                        node.specifiers.forEach(function (s) {
+                        node.specifiers.forEach((s) => {
                             if (s.imported.name === 'getCurrentInstance') {
                                 context.report(
                                     s,
-                                    'Do not use getCurrentInstance',
+                                    'Do not use getCurrentInstance'
                                 )
                             }
                         })

@@ -2,13 +2,15 @@ module.exports = {
     meta: {
         type: 'problem',
     },
-    create: function (context) {
+    create (context) {
         return {
-            'CallExpression[callee.name="defineComponent"] Property[key.name="render"]': function (
-                node,
-            ) {
-                context.report(node, 'Please return render function in setup')
-            },
+            'CallExpression[callee.name="defineComponent"] Property[key.name="render"]':
+                function (node) {
+                    context.report(
+                        node,
+                        'Please return render function in setup'
+                    )
+                },
         }
     },
 }
