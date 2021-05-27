@@ -1,13 +1,15 @@
 {
-  "name": "eslint-plugin-wont",
-  "version": "0.0.0",
-  "description": "Eslint plugin for wont",
+  "name": "eslint-plugin-vue3-jsx",
+  "version": "0.0.3",
+  "description": "Eslint plugin for vue3-jsx",
   "keywords": [
+    "vue3",
+    "vue3-jsx",
     "eslint",
     "eslintplugin",
-    "eslint-plugin"
+    "eslint-plugin",
+    "eslint-plugin-vue3-jsx"
   ],
-  "author": "bantang",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha tests --recursive"
@@ -22,5 +24,17 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "license": "ISC"
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lk0606/eslint-vue3-jsx"
+  },
+  "author": {
+    "name": "bantang",
+    "email": "919590347@qq.com"
+  },
+  "license": "MIT"
 }

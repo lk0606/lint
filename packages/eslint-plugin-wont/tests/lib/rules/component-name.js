@@ -3,34 +3,42 @@
  * @author bantang
  */
 "use strict";
-
-//------------------------------------------------------------------------------
-// Requirements
-//------------------------------------------------------------------------------
-
 var rule = require("../../../lib/rules/component-name"),
-
     RuleTester = require("../../../lib/testers/rule-tester");
-
-
-//------------------------------------------------------------------------------
-// Tests
-//------------------------------------------------------------------------------
 
 var ruleTester = new RuleTester();
 ruleTester.run("component-name", rule, {
-
     valid: [
+        {
+            code: `
+                import { defineComponent } from 'vue'
 
-        // give me some code that won't trigger a warning
+                export default defineComponent({
+                    name: 'ComponentNameNeeded',
+                    setup() {
+                        return ()=> {
+                            return <section>component name needed</section>
+                        }
+                    }
+                })
+            `
+        }
     ],
-
     invalid: [
         {
-            code: "// TODO fail code",
+            code: `
+                import { defineComponent } from 'vue'
+
+                export default defineComponent({
+                    setup() {
+                        return ()=> {
+                            return <section>component name needed</section>
+                        }
+                    }
+                })
+            `,
             errors: [{
-                message: "Fill me in.",
-                type: "Me too"
+                messageId: "componentNameNeeded",
             }]
         }
     ]

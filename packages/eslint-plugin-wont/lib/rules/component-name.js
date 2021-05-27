@@ -12,33 +12,35 @@ module.exports = {
     meta: {
         docs: {
             description: "vue component name needed",
-            category: "Fill me in",
-            recommended: false
+            category: "vue",
+            recommended: true
         },
+        type: "suggestion",
         fixable: null,  // or "code" or "whitespace"
         schema: [
             // fill in your schema
-        ]
+        ],
+        messages: {
+            componentNameNeeded: 'component name needed',
+        },
     },
 
     create: function(context) {
-
-        // variables should be defined here
-
-        //----------------------------------------------------------------------
-        // Helpers
-        //----------------------------------------------------------------------
-
-        // any helper functions should go here or else delete this section
-
-        //----------------------------------------------------------------------
-        // Public
-        //----------------------------------------------------------------------
-
         return {
-
-            // give me methods
-
+            'CallExpression[callee.name="defineComponent"]>ObjectExpression': function (node) {
+                const properties = node.properties;
+                if (Array.isArray(properties)) {
+                    for (const p of properties) {
+                        if (p.key && p.key.name === 'name') {
+                            context.report({
+                                node,
+                                messageId: 'componentNameNeeded',
+                            })
+                            return
+                        }
+                    }
+                }
+            },
         };
     }
 };
