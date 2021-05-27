@@ -1,14 +1,10 @@
-const isProd = process.env.NODE_ENV === 'production';
-
+const isProd = process.env.NODE_ENV === 'production'
+console.log('isProd :>> ', isProd)
 module.exports = {
     root: true,
-    extends: ['standard'],
+    extends: ['eslint-config-ali', 'prettier'],
     rules: {
-        'no-console': isProd ? 'error' : 'warn',
-        'no-debugger': isProd ? 'error' : 'warn',
-        'comma-dangle': 'off',
-        indent: 'off',
-        semi: 'off',
-        '@typescript-eslint/explicit-module-boundary-types': 0,
+        'no-console': isProd ? 2 : 1,
+        'no-debugger': isProd ? 2 : 1,
     },
-};
+}

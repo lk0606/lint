@@ -5,10 +5,32 @@
     "packages/*"
   ],
   "scripts": {
-    "preinstall": "node ./scripts/checkYarn.js"
+    "prettier": "prettier --write .",
+    "eslint": "eslint . --ext .jsx,.js,.tsx,.ts",
+    "eslint:fix": "eslint . --ext .jsx,.js,.tsx,.ts --fix",
+    "preinstall": "node ./scripts/checkYarn.js",
+    "prepare": "husky install"
   },
   "types": "",
   "engines": {
     "node": ">=10.0.0"
+  },
+  "lint-staged": {
+    "*.{jsx,js,tsx,ts,md,mdx,css,less,html}": [
+      "prettier --write"
+    ],
+    "*.{jsx,js,tsx,ts}": [
+      "eslint --fix"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.27.0",
+    "eslint-config-ali": "^12.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.19.1",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.0"
   }
 }

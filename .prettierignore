@@ -1,5 +1,13 @@
 
 # build
+docs
+dist
+dist-ssr
+lib
+es
+
+# eslint
+*.eslintcache
 
 # local env files
 *.local
@@ -16,7 +24,7 @@ yarn-error.log*
 
 
 package-lock.json
-yarn.lock
+yarn-lock.json
 
 # Editor directories and files
 .idea
