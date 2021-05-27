@@ -15,6 +15,9 @@
     "engines": {
         "node": ">=10.0.0"
     },
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    },
     "lint-staged": {
         "*.{jsx,js,tsx,ts,md,mdx,css,less,html}": [
             "prettier --write"
@@ -24,7 +27,9 @@
         ]
     },
     "devDependencies": {
+        "@commitlint/cli": "^12.1.4",
         "babel-eslint": "^10.1.0",
+        "commitlint-config-ali": "^0.1.3",
         "eslint": "^7.27.0",
         "eslint-config-ali": "^12.1.0",
         "eslint-config-prettier": "^8.3.0",
