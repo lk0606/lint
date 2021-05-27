@@ -46,7 +46,8 @@ ruleTester.run("no-directives", rule, {
             `,
             ...parserOpt,
             errors: [{
-                message: "Directive v-if is not supported in JSX",
+                // message: "Directive v-if is not supported in JSX",
+                messageId: "noDirectives",
             }],
         }
     ]

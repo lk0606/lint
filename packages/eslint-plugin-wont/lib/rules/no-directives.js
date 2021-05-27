@@ -11,7 +11,7 @@ const url = docsUrl(RULE_NAME)
 
 const allowedDirectives = ['v-html', 'v-slots', 'v-model', 'v-models', 'v-show']
 
-const noDirectives = {
+module.exports = {
     meta: {
         docs: {
             description: "vue3 jsx no directives",
@@ -23,10 +23,11 @@ const noDirectives = {
         fixable: null,  // or "code" or "whitespace"
         schema: [
             // fill in your schema
+            // TODO custom v-x
         ],
-        // messages: {
-        //     noDirectives: 'Directive is not supported in JSX',
-        // },
+        messages: {
+            noDirectives: 'Directive {{directiveName}} is not supported in JSX',
+        },
     },
 
     create(context) {
@@ -37,8 +38,7 @@ const noDirectives = {
                     const isCustomDirective = /^(v-custom)[A-Z]+[a-z]+$/.test(
                         name
                     )
-                    const errMsg = `Directive ${name} is not supported in JSX`
-                    // noDirectives.meta.messages = errMsg
+                    // const errMsg = `Directive ${name} is not supported in JSX`
                     if (
                         name.startsWith('v-') &&
                         !allowedDirectives.includes(name) &&
@@ -46,8 +46,11 @@ const noDirectives = {
                     ) {
                         context.report({
                             node,
-                            message: errMsg,
-                            // messageId: 'noDirectives',
+                            // message: errMsg,
+                            messageId: 'noDirectives',
+                            data: {
+                              name,
+                            },
                         })
                     }
                 }
@@ -56,4 +59,3 @@ const noDirectives = {
     },
 };
 
-module.exports = noDirectives

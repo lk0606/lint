@@ -38,4 +38,4 @@ export default defineComponent({
 
 ## When Not To Use It
 
-When you think is not necessary, and disagree the Rule Details
+When you think is unnecessary, and disagree the Rule Details

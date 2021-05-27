@@ -1,36 +1,50 @@
 # Directives sometimes cause error, for example: v-if (no-directives)
 
-Please describe the origin of the rule here.
+```js
+// allowed official
+allowedDirectives = ['v-html', 'v-slots', 'v-model', 'v-models', 'v-show']
+// allowed custom
+/^(v-custom)[A-Z]+[a-z]+$/.test('directives')
+```
 
 
 ## Rule Details
 
-This rule aims to...
+This rule aims to avoid directives cause error, which in vue3 jsx
 
 Examples of **incorrect** code for this rule:
+> v-if is not allowed, that cause error
 
-```js
+```jsx
+import { defineComponent } from 'vue'
 
-// fill me in
-
+export default defineComponent({
+    setup() {
+        return ()=> {
+            return <section v-if={true}>no-directives</section>
+        }
+    }
+})
 ```
 
 Examples of **correct** code for this rule:
 
-```js
+```jsx
+import { defineComponent } from 'vue'
 
-// fill me in
-
+export default defineComponent({
+    name: 'ComponentNameNeeded',
+    setup() {
+        return ()=> {
+            return <section v-show={true}>no-directives</section>
+        }
+    }
+})
 ```
 
 ### Options
-
-If there are any options, describe them here. Otherwise, delete this section.
-
+> TODO allowed: [], pattern: /^(v-custom)[A-Z]+[a-z]+$/
 ## When Not To Use It
 
-Give a short description of when it would be appropriate to turn off this rule.
+When you think is unnecessary
 
-## Further Reading
-
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
