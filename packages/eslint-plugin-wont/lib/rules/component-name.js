@@ -32,14 +32,14 @@ module.exports = {
                 if (Array.isArray(properties)) {
                     for (const p of properties) {
                         if (p.key && p.key.name === 'name') {
-                            context.report({
-                                node,
-                                messageId: 'componentNameNeeded',
-                            })
                             return
                         }
                     }
                 }
+                context.report({
+                    node,
+                    messageId: 'componentNameNeeded',
+                })
             },
         };
     }

@@ -6,6 +6,7 @@
 
 const rule = require("../../../lib/rules/component-name")
 const { RuleTester } = require("eslint")
+const parserOpt = require("../../common/parserOptions")
 
 const ruleTester = new RuleTester()
 
@@ -23,7 +24,8 @@ ruleTester.run("component-name", rule, {
                         }
                     }
                 })
-            `
+            `,
+            ...parserOpt,
         }
     ],
     invalid: [
@@ -39,14 +41,10 @@ ruleTester.run("component-name", rule, {
                     }
                 })
             `,
+            ...parserOpt,
             errors: [{
                 messageId: "componentNameNeeded",
             }],
-            parserOptions: {
-                ecmaFeatures: {
-                jsx: true,
-                },
-            },
         }
     ]
 });
