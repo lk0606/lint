@@ -1,0 +1,47 @@
+{
+    // 使用 IntelliSense 了解相关属性。
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "当前文件",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${file}"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "babel-node 当前文件",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/babel-node",
+            "program": "${file}"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "启动程序",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/app.js"
+        },
+        // 下面是用于调试package.json的命令 之前可以用，貌似vscode出了点bug导致现在用不了了
+        {
+            "name": "npm test",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run-script", "test"    //这里的dev就对应package.json中的scripts中的dev
+            ],
+            "port": 9229    //这个端口是调试的端口，不是项目启动的端口
+        },
+    ]
+}
