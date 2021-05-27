@@ -6,7 +6,7 @@
 
 const rule = require("../../../lib/rules/component-name")
 const { RuleTester } = require("eslint")
-const parserOpt = require("../../common/parserOptions")
+const parserOpt = require("../../../common/parserOptions")
 
 const ruleTester = new RuleTester()
 

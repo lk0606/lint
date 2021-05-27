@@ -38,4 +38,4 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
--   component-name
+-   [component-name](https://github.com/lk0606/lint/blob/master/packages/eslint-plugin-vue3-jsx/docs/rules/component-name.md)

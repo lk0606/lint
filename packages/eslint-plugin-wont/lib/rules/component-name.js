@@ -4,16 +4,19 @@
  */
 "use strict";
 
-//------------------------------------------------------------------------------
-// Rule Definition
-//------------------------------------------------------------------------------
+const docsUrl = require('../../common/docsUrl')
+
+const RULE_NAME = 'component-name'
+const url = docsUrl(RULE_NAME)
 
 module.exports = {
+    name: RULE_NAME,
     meta: {
         docs: {
             description: "vue component name needed",
             category: "vue",
-            recommended: true
+            recommended: true,
+            url,
         },
         type: "suggestion",
         fixable: null,  // or "code" or "whitespace"
