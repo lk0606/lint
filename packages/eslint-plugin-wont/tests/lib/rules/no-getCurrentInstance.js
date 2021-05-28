@@ -1,5 +1,5 @@
 /**
- * @fileoverview no-getCurrentInstance desc // TODO Rule to ...
+ * @fileoverview no-getCurrentInstance disallow getCurrentInstance, that cause global pollution, use self useProxyRef instead.
  * @author bantang
  */
 'use strict'
