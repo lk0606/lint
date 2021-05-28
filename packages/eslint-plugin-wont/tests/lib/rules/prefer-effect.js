@@ -43,7 +43,7 @@ ruleTester.run('prefer-effect', rule, {
     invalid: [
         {
             code: `
-                import { defineComponent, onMounted } from 'vue'
+                import { defineComponent, onBeforeUpdate } from 'vue'
 
                 export default defineComponent({
                     name: 'prefer-effect',
@@ -51,7 +51,7 @@ ruleTester.run('prefer-effect', rule, {
                         msg: 'prefer-effect'
                     },
                     setup() {
-                        onMounted(()=> {
+                        onBeforeUpdate(()=> {
                             console.log('props.msg emit', props.msg)
                         })
 

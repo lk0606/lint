@@ -9,7 +9,7 @@ This rule aims to avoid use onBeforeUpdate onUpdated lifecycle, that cause Maxim
 Examples of **incorrect** code for this rule:
 
 ```jsx
-import { defineComponent, onMounted } from 'vue'
+import { defineComponent, onBeforeUpdate } from 'vue'
 
 export default defineComponent({
     name: 'prefer-effect',
@@ -17,7 +17,7 @@ export default defineComponent({
         msg: 'prefer-effect',
     },
     setup() {
-        onMounted(() => {
+        onBeforeUpdate(() => {
             console.log('props.msg emit', props.msg)
         })
 

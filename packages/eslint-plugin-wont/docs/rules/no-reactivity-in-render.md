@@ -24,6 +24,20 @@ export default defineComponent({
 })
 ```
 
+```jsx
+import { defineComponent, reactive } from 'vue'
+
+export default defineComponent({
+    name: 'no-reactivity-in-render',
+    render() {
+        const state = reactive({
+            show: true,
+        })
+        return <section>no-reactivity-in-render</section>
+    },
+})
+```
+
 Examples of **correct** code for this rule:
 
 ```jsx

@@ -55,5 +55,26 @@ ruleTester.run('no-reactivity-in-render', rule, {
                 },
             ],
         },
+        {
+            code: `
+                import { defineComponent, reactive } from 'vue'
+
+                export default defineComponent({
+                    name: 'no-reactivity-in-render',
+                    render() {
+                        const state = reactive({
+                            show: true,
+                        })
+                        return <section>no-reactivity-in-render</section>
+                    }
+                })
+            `,
+            ...parserOpt,
+            errors: [
+                {
+                    messageId: 'no-reactivity-in-render',
+                },
+            ],
+        },
     ],
 })
