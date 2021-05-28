@@ -2,15 +2,15 @@
  * @fileoverview vue component name needed
  * @author bantang
  */
-"use strict";
+'use strict'
 
-const rule = require("../../../lib/rules/component-name")
-const { RuleTester } = require("eslint")
-const parserOpt = require("../../../common/parserOptions")
+const rule = require('../../../lib/rules/component-name')
+const { RuleTester } = require('eslint')
+const parserOpt = require('../../../common/parserOptions')
 
 const ruleTester = new RuleTester()
 
-ruleTester.run("component-name", rule, {
+ruleTester.run('component-name', rule, {
     valid: [
         {
             code: `
@@ -26,7 +26,7 @@ ruleTester.run("component-name", rule, {
                 })
             `,
             ...parserOpt,
-        }
+        },
     ],
     invalid: [
         {
@@ -42,9 +42,11 @@ ruleTester.run("component-name", rule, {
                 })
             `,
             ...parserOpt,
-            errors: [{
-                messageId: "componentNameNeeded",
-            }],
-        }
-    ]
-});
+            errors: [
+                {
+                    messageId: 'component-name',
+                },
+            ],
+        },
+    ],
+})

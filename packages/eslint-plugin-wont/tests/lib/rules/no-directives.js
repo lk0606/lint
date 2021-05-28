@@ -2,17 +2,16 @@
  * @fileoverview Directives sometimes cause error, for example: v-if
  * @author bantang
  */
-"use strict";
+'use strict'
 
-const rule = require("../../../lib/rules/no-directives")
+const rule = require('../../../lib/rules/no-directives')
 
-const { RuleTester } = require("eslint")
-const parserOpt = require("../../../common/parserOptions")
+const { RuleTester } = require('eslint')
+const parserOpt = require('../../../common/parserOptions')
 
 const ruleTester = new RuleTester()
 
-ruleTester.run("no-directives", rule, {
-
+ruleTester.run('no-directives', rule, {
     valid: [
         {
             code: `
@@ -28,7 +27,7 @@ ruleTester.run("no-directives", rule, {
                 })
             `,
             ...parserOpt,
-        }
+        },
     ],
 
     invalid: [
@@ -45,10 +44,11 @@ ruleTester.run("no-directives", rule, {
                 })
             `,
             ...parserOpt,
-            errors: [{
-                // message: "Directive v-if is not supported in JSX",
-                messageId: "noDirectives",
-            }],
-        }
-    ]
-});
+            errors: [
+                {
+                    messageId: 'no-directives',
+                },
+            ],
+        },
+    ],
+})

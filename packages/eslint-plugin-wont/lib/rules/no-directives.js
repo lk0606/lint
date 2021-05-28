@@ -2,7 +2,7 @@
  * @fileoverview Directives sometimes cause error, for example: v-if
  * @author bantang
  */
-"use strict";
+'use strict'
 
 const docsUrl = require('../../common/docsUrl')
 
@@ -14,19 +14,20 @@ const allowedDirectives = ['v-html', 'v-slots', 'v-model', 'v-models', 'v-show']
 module.exports = {
     meta: {
         docs: {
-            description: "vue3 jsx no directives",
-            category: "vue3-jsx",
+            description: 'vue3 jsx no directives',
+            category: 'vue3-jsx',
             recommended: true,
             url,
         },
-        type: "problem",
-        fixable: null,  // or "code" or "whitespace"
+        type: 'problem',
+        fixable: null, // or "code" or "whitespace"
         schema: [
             // fill in your schema
             // TODO custom v-x
         ],
         messages: {
-            noDirectives: 'Directive {{directiveName}} is not supported in JSX',
+            'no-directives':
+                'Directive {{directiveName}} is not supported in JSX',
         },
     },
 
@@ -38,7 +39,6 @@ module.exports = {
                     const isCustomDirective = /^(v-custom)[A-Z]+[a-z]+$/.test(
                         name
                     )
-                    // const errMsg = `Directive ${name} is not supported in JSX`
                     if (
                         name.startsWith('v-') &&
                         !allowedDirectives.includes(name) &&
@@ -46,10 +46,9 @@ module.exports = {
                     ) {
                         context.report({
                             node,
-                            // message: errMsg,
-                            messageId: 'noDirectives',
+                            messageId: 'no-directives',
                             data: {
-                              name,
+                                name,
                             },
                         })
                     }
@@ -57,5 +56,4 @@ module.exports = {
             },
         }
     },
-};
-
+}

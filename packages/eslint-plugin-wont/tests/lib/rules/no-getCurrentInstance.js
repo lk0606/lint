@@ -45,7 +45,7 @@ ruleTester.run('no-getCurrentInstance', rule, {
             ...parserOpt,
             errors: [
                 {
-                    messageId: 'noGetCurrentInstance',
+                    messageId: 'no-getCurrentInstance',
                 },
             ],
         },

@@ -2,7 +2,7 @@
  * @fileoverview vue component name needed
  * @author bantang
  */
-"use strict";
+'use strict'
 
 const docsUrl = require('../../common/docsUrl')
 
@@ -13,37 +13,38 @@ module.exports = {
     name: RULE_NAME,
     meta: {
         docs: {
-            description: "vue component name needed",
-            category: "vue3-jsx",
+            description: 'vue component name needed',
+            category: 'vue3-jsx',
             recommended: true,
             url,
         },
-        type: "suggestion",
-        fixable: null,  // or "code" or "whitespace"
+        type: 'suggestion',
+        fixable: null, // or "code" or "whitespace"
         schema: [
             // fill in your schema
         ],
         messages: {
-            componentNameNeeded: 'component name needed',
+            'component-name': 'component name needed',
         },
     },
 
     create(context) {
         return {
-            'CallExpression[callee.name="defineComponent"]>ObjectExpression': function (node) {
-                const {properties} = node;
-                if (Array.isArray(properties)) {
-                    for (const p of properties) {
-                        if (p.key && p.key.name === 'name') {
-                            return
+            'CallExpression[callee.name="defineComponent"]>ObjectExpression':
+                function (node) {
+                    const { properties } = node
+                    if (Array.isArray(properties)) {
+                        for (const p of properties) {
+                            if (p.key && p.key.name === 'name') {
+                                return
+                            }
                         }
                     }
-                }
-                context.report({
-                    node,
-                    messageId: 'componentNameNeeded',
-                })
-            },
-        };
-    }
-};
+                    context.report({
+                        node,
+                        messageId: 'component-name',
+                    })
+                },
+        }
+    },
+}

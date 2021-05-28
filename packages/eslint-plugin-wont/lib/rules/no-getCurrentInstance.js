@@ -25,7 +25,7 @@ module.exports = {
             // fill in your schema
         ],
         messages: {
-            noGetCurrentInstance:
+            'no-getCurrentInstance':
                 'Disallow getCurrentInstance, that cause global pollution, use self useProxyRef instead',
         },
     },
@@ -39,7 +39,7 @@ module.exports = {
                             if (s.imported.name === 'getCurrentInstance') {
                                 context.report({
                                     node: s,
-                                    messageId: 'noGetCurrentInstance',
+                                    messageId: 'no-getCurrentInstance',
                                 })
                             }
                         })
