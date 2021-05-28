@@ -28,7 +28,6 @@ module.exports = {
             // fill in your schema
         ],
         messages: {
-            // TODO messageId <%= name %> need cameCase
             '<%= name %>': '<%= name %> error message',
         },
     },

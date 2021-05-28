@@ -48,7 +48,6 @@ ruleTester.run("<%= name %>", rule, {
                 })
             `,
             ...parserOpt,
-            // TODO 更换 messageId
             errors: [{
                 messageId: "<%= name %>",
             }],
