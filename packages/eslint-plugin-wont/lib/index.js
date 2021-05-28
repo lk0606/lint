@@ -1,22 +1,10 @@
 /**
- * @fileoverview Eslint plugin for wont
+ * @fileoverview Eslint plugin for vue3-jsx
  * @author bantang
  */
-"use strict";
+'use strict'
 
-//------------------------------------------------------------------------------
-// Requirements
-//------------------------------------------------------------------------------
-
-var requireIndex = require("requireindex");
-
-//------------------------------------------------------------------------------
-// Plugin Definition
-//------------------------------------------------------------------------------
-
+const requireIndex = require('requireindex')
 
 // import all rules in lib/rules
-module.exports.rules = requireIndex(__dirname + "/rules");
-
-
-
+module.exports.rules = requireIndex(`${__dirname}/rules`)

@@ -18,7 +18,7 @@ $ npm install eslint-plugin-vue3-jsx --save-dev
 
 ## Usage
 
-Add `wont` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `vue3-jsx` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
 
 ```json
 {
