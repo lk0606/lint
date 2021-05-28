@@ -2,7 +2,7 @@
   to: packages/eslint-plugin-wont/lib/rules/<%= name %>.js
 ---
 /**
- * @fileoverview <%= name %> desc
+ * @fileoverview <%= name %> desc // TODO Rule to ...
  * @author bantang
  */
 "use strict";

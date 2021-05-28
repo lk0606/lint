@@ -5,6 +5,7 @@
         "packages/*"
     ],
     "scripts": {
+        "create": "hygen module with-prompt",
         "prettier": "prettier --write .",
         "eslint": "eslint . --ext .jsx,.js,.tsx,.ts",
         "eslint:fix": "eslint . --ext .jsx,.js,.tsx,.ts --fix",
