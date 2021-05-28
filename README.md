@@ -1,8 +1,19 @@
 # Develop
 
+## yo eslint
+
 ```bash
 npm install -g yo generator-eslint
+cd packages/eslint-plugin-vue3-jsx
 yo eslint:plugin
+yo eslint:rule
+```
+
+## npm run create (recommend)
+
+```bash
+npm run create
+# type lower-case for the rule
 ```
 
 # Reference
