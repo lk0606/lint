@@ -21,7 +21,7 @@ ruleTester.run("<%= name %>", rule, {
                 import { defineComponent } from 'vue'
 
                 export default defineComponent({
-                    name: 'ComponentNameNeeded',
+                    name: '<%= name %>',
                     setup() {
                         return ()=> {
                             return <section><%= name %></section>
@@ -39,6 +39,7 @@ ruleTester.run("<%= name %>", rule, {
                 import { defineComponent } from 'vue'
 
                 export default defineComponent({
+                    name: '<%= name %>',
                     setup() {
                         return ()=> {
                             return <section><%= name %></section>
@@ -49,7 +50,7 @@ ruleTester.run("<%= name %>", rule, {
             ...parserOpt,
             // TODO 更换 messageId
             errors: [{
-                messageId: "componentNameNeeded",
+                messageId: "<%= name %>",
             }],
         }
     ]

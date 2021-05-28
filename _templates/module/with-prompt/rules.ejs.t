@@ -16,6 +16,7 @@ module.exports = {
     name: RULE_NAME,
     meta: {
         docs: {
+            // TODO desc
             description: "<%= name %> desc",
             category: "vue3-jsx",
             recommended: true,
