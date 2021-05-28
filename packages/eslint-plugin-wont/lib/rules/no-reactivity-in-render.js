@@ -35,7 +35,7 @@ module.exports = {
             recommended: true,
             url,
         },
-        type: 'suggestion',
+        type: 'problem',
         fixable: null, // or "code" or "whitespace"
         schema: [
             // fill in your schema
