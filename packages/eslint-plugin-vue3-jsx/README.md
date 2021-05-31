@@ -31,11 +31,23 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "vue3-jsx/component-name": 2
+        "vue3-jsx/no-getCurrentInstance": 2,
+        "vue3-jsx/prefer-effect": 2,
+        "vue3-jsx/no-this-in-setup": 2,
+        "vue3-jsx/prefer-render-in-setup": 2,
+        "vue3-jsx/component-name": 2,
+        "vue3-jsx/no-directives": 2,
+        "vue3-jsx/no-reactivity-in-render": 2
     }
 }
 ```
 
 ## Supported Rules
 
+-   [no-getCurrentInstance](https://github.com/lk0606/lint/blob/master/packages/eslint-plugin-vue3-jsx/docs/rules/no-getCurrentInstance.md)
+-   [prefer-effect](https://github.com/lk0606/lint/blob/master/packages/eslint-plugin-vue3-jsx/docs/rules/prefer-effect.md)
+-   [no-this-in-setup](https://github.com/lk0606/lint/blob/master/packages/eslint-plugin-vue3-jsx/docs/rules/no-this-in-setup.md)
+-   [prefer-render-in-setup](https://github.com/lk0606/lint/blob/master/packages/eslint-plugin-vue3-jsx/docs/rules/prefer-render-in-setup.md)
 -   [component-name](https://github.com/lk0606/lint/blob/master/packages/eslint-plugin-vue3-jsx/docs/rules/component-name.md)
+-   [no-directives](https://github.com/lk0606/lint/blob/master/packages/eslint-plugin-vue3-jsx/docs/rules/no-directives.md)
+-   [no-reactivity-in-render](https://github.com/lk0606/lint/blob/master/packages/eslint-plugin-vue3-jsx/docs/rules/no-reactivity-in-render.md)

@@ -1,6 +1,6 @@
 {
     "name": "eslint-plugin-vue3-jsx",
-    "version": "0.0.3",
+    "version": "0.0.3-alpha.1",
     "description": "Eslint plugin for vue3-jsx",
     "keywords": [
         "vue3",
