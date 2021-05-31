@@ -45,7 +45,7 @@ module.exports = {
                                 lifecycles.includes(s.expression.callee.name)
                             ) {
                                 context.report({
-                                    node,
+                                    node: s.expression,
                                     messageId: 'prefer-effect',
                                 })
                             }

@@ -38,7 +38,7 @@ module.exports = {
                         node.specifiers.forEach((s) => {
                             if (s.imported.name === 'getCurrentInstance') {
                                 context.report({
-                                    node: s,
+                                    node: s.imported,
                                     messageId: 'no-getCurrentInstance',
                                 })
                             }
