@@ -1,3 +1,14 @@
+/**
+ * @fileoverview no-reactivity-in-render to avoid Maximum recursive updates exceeded
+ * @author bantang
+ */
+'use strict'
+
+const docsUrl = require('../../common/docsUrl')
+
+const RULE_NAME = 'no-reactivity-in-render'
+const url = docsUrl(RULE_NAME)
+
 const reactivityApis = [
     'reactive',
     'readonly',
@@ -14,12 +25,26 @@ const reactivityApis = [
     'watch',
 ]
 
-// TODO: add custom composition API match
-
 module.exports = {
+    name: RULE_NAME,
     meta: {
-        type: 'suggestion',
+        docs: {
+            description:
+                'no-reactivity-in-render to avoid Maximum recursive updates exceeded',
+            category: 'vue3-jsx',
+            recommended: true,
+            url,
+        },
+        type: 'problem',
+        fixable: null, // or "code" or "whitespace"
+        schema: [
+            // fill in your schema
+        ],
+        messages: {
+            'no-reactivity-in-render': 'No reactivity api in render function',
+        },
     },
+
     create(context) {
         return {
             'CallExpression[callee.name="defineComponent"] Property[key.name="setup"] ReturnStatement CallExpression':
@@ -29,10 +54,10 @@ module.exports = {
                         node.callee.name &&
                         reactivityApis.includes(node.callee.name)
                     ) {
-                        context.report(
+                        context.report({
                             node,
-                            'No reactivity api in render function'
-                        )
+                            messageId: 'no-reactivity-in-render',
+                        })
                     }
                 },
             'CallExpression[callee.name="defineComponent"] Property[key.name="render"] CallExpression':
@@ -42,10 +67,10 @@ module.exports = {
                         node.callee.name &&
                         reactivityApis.includes(node.callee.name)
                     ) {
-                        context.report(
+                        context.report({
                             node,
-                            'No reactivity api in render function'
-                        )
+                            messageId: 'no-reactivity-in-render',
+                        })
                     }
                 },
         }

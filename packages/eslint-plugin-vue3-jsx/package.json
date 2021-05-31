@@ -1,21 +1,38 @@
 {
-    "name": "eslint-plugin-vue3-jsx1",
-    "version": "0.0.2",
-    "files": [
-        "configs",
-        "rules",
-        "index.js",
-        "README.md",
-        "package.json"
-    ],
-    "main": "index.js",
-    "description": "Eslint for vue3, which using jsx",
+    "name": "eslint-plugin-vue3-jsx",
+    "version": "0.0.3",
+    "description": "Eslint plugin for vue3-jsx",
     "keywords": [
         "vue3",
+        "vue3-jsx",
         "eslint",
+        "eslintplugin",
         "eslint-plugin",
         "eslint-plugin-vue3-jsx"
     ],
+    "main": "lib/index.js",
+    "scripts": {
+        "prepublishOnly": "npm run test",
+        "link": "npm run prepublishOnly && npm link",
+        "test": "mocha tests --recursive -R dot"
+    },
+    "files": [
+        "common",
+        "docs",
+        "lib",
+        "README.md",
+        "package.json"
+    ],
+    "dependencies": {
+        "requireindex": "~1.1.0"
+    },
+    "devDependencies": {
+        "eslint": "^7.1.0",
+        "mocha": "^7.2.0"
+    },
+    "engines": {
+        "node": ">=0.10.0"
+    },
     "publishConfig": {
         "registry": "https://registry.npmjs.org/",
         "access": "public"
@@ -27,5 +44,6 @@
     "author": {
         "name": "bantang",
         "email": "919590347@qq.com"
-    }
+    },
+    "license": "MIT"
 }

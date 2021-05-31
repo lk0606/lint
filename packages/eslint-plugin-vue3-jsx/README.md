@@ -1,44 +1,41 @@
-<a name="top"></a>
+# eslint-plugin-vue3-jsx
 
-A plugin to strict keep the style of using JSX in Vue3 project.
+Eslint plugin for vue3-jsx
 
-<a name="rules"></a>
+## Installation
 
-## Rules
+You'll first need to install [ESLint](http://eslint.org):
 
--   [prefer-effect](#rule-prefer-effect)
--   [prefer-render-in-setup](#rule-prefer-render-in-setup)
--   [no-this-in-setup](#rule-no-this-in-setup)
--   [no-getCurrentInstance](#rule-no-getCurrentInstance)
--   [component-nam](#rule-component-name)
-
-## Each Rule
-
-<a name="rule-prefer-effect"></a>
-
-### prefer-effect
-
-When using composition API, mostly you will not need to use lifecyle methods. Or maybe you should just use effects to preform actions.
-
-You may want to fetch data when component mounted:
-
-```js
-onMounted(() => {
-    fetchData(props.id)
-})
+```
+$ npm i eslint --save-dev
 ```
 
-This will rise a problem, how to fetch data when `props.id` updated. So you may face two situations:
+Next, install `eslint-plugin-vue3-jsx`:
 
--   the `props.id` never change
--   you have to watch `props.id` to fetch data again
-
-So the best pratice is:
-
-```js
-watchEffect(() => {
-    fetchData(props.id)
-})
+```
+$ npm install eslint-plugin-vue3-jsx --save-dev
 ```
 
-Whenever `props.id` changed, `fetchData` invoked. If `props.id` never changed, then the `effect` will peform only once.
+## Usage
+
+Add `vue3-jsx` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+
+```json
+{
+    "plugins": ["vue3-jsx"]
+}
+```
+
+Then configure the rules you want to use under the rules section.
+
+```json
+{
+    "rules": {
+        "vue3-jsx/component-name": 2
+    }
+}
+```
+
+## Supported Rules
+
+-   [component-name](https://github.com/lk0606/lint/blob/master/packages/eslint-plugin-vue3-jsx/docs/rules/component-name.md)
