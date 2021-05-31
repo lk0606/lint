@@ -1,5 +1,5 @@
 ---
-  to: packages/eslint-plugin-wont/tests/lib/rules/<%= name %>.js
+  to: packages/eslint-plugin-vue3-jsx/tests/lib/rules/<%= name %>.js
 ---
 /**
  * @fileoverview <%= name %> desc // TODO Rule to ...

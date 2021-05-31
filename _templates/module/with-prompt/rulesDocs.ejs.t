@@ -1,5 +1,5 @@
 ---
-  to: packages/eslint-plugin-wont/docs/rules/<%= name %>.md
+  to: packages/eslint-plugin-vue3-jsx/docs/rules/<%= name %>.md
 ---
 # Type a short description of this rule (<%= name %>)
 // TODO description
