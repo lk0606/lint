@@ -39,7 +39,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/lk0606/eslint-vue3-jsx"
+        "url": "git+https://github.com/lk0606/lint"
     },
     "author": {
         "name": "bantang",
