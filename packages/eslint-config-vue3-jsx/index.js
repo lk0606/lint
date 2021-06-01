@@ -22,7 +22,7 @@ module.exports = {
         'airbnb-typescript',
         'plugin:vue/vue3-recommended',
         'plugin:vue3-jsx/recommended',
-        'airbnb-base',
+        // 'airbnb-base',
         'prettier',
     ],
     plugins: ['vue', '@typescript-eslint'],

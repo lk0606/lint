@@ -1,6 +1,6 @@
 {
     "name": "eslint-config-vue3-jsx",
-    "version": "0.0.2-alpha.5",
+    "version": "0.0.2-beta.1",
     "description": "Eslint config for vue3-jsx",
     "files": [
         "index.js",
@@ -35,8 +35,13 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/lk0606/lint"
+        "url": "git+https://github.com/lk0606/lint/tree/master/packages/eslint-config-vue3-jsx"
     },
+    "bugs": {
+        "url": "https://github.com/lk0606/lint/issues",
+        "email": "919590347@qq.com"
+    },
+    "homepage": "https://github.com/lk0606/lint/tree/master/packages/eslint-config-vue3-jsx",
     "author": {
         "name": "bantang",
         "email": "919590347@qq.com"
