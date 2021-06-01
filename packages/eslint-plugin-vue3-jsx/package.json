@@ -38,7 +38,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/lk0606/lint/tree/master/packages/eslint-plugin-vue3-jsx"
+        "url": "https://github.com/lk0606/lint/tree/master/packages/eslint-plugin-vue3-jsx"
     },
     "bugs": {
         "url": "https://github.com/lk0606/lint/issues",
