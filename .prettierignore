@@ -6,6 +6,10 @@ dist
 dist-ssr
 es
 
+
+# auto gen
+.husky
+
 # eslint
 *.eslintcache
 

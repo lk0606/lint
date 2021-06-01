@@ -8,6 +8,7 @@ const a11yOff = Object.keys(require('eslint-plugin-jsx-a11y').rules).reduce(
 )
 
 module.exports = {
+    root: true,
     env: {
         browser: true,
         es2021: true,
@@ -21,6 +22,7 @@ module.exports = {
         'airbnb-typescript',
         'plugin:vue/vue3-recommended',
         'plugin:vue3-jsx/recommended',
+        'airbnb-base',
         'prettier',
     ],
     plugins: ['vue', '@typescript-eslint'],
@@ -28,6 +30,7 @@ module.exports = {
         ecmaVersion: 10,
         ecmaFeatures: {
             tsx: true,
+            jsx: true,
         },
         project: ['tsconfig.json'],
         parser: '@typescript-eslint/parser',
