@@ -1,4 +1,17 @@
+# hygen
+_templates
+
 # build
+dist
+dist-ssr
+es
+
+
+# auto gen
+.husky
+
+# eslint
+*.eslintcache
 
 # local env files
 *.local
