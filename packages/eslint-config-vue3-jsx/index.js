@@ -22,6 +22,7 @@ module.exports = {
         'airbnb-typescript',
         'plugin:vue/vue3-recommended',
         'plugin:vue3-jsx/recommended',
+        // unused airbnb-typescript already extends airbnb-base
         // 'airbnb-base',
         'prettier',
     ],
@@ -50,20 +51,9 @@ module.exports = {
         'react/destructuring-assignment': 'off',
         'react/jsx-key': 'error',
         ...a11yOff,
-        // compatibility
-        // TODO enum https://github.com/typescript-eslint/typescript-eslint/issues/2484
-        // "no-shadow": [2, { "builtinGlobals": true, "hoist": "all", "allow": [] }],
-        // "@typescript-eslint/no-shadow": [2, { "builtinGlobals": true, "hoist": "all", "allow": [] }],
         // base
         semi: ['error', 'never'],
         curly: ['error', 'all'],
-        indent: [
-            'error',
-            4,
-            {
-                ignoreComments: true,
-            },
-        ],
         'react/no-unused-prop-types': 0,
         'no-underscore-dangle': 0,
         'no-unused-expressions': 0,
@@ -109,10 +99,22 @@ module.exports = {
         ],
         camelcase: [0, { properties: 'never' }],
         // ts
-        '@typescript-eslint/no-empty-function': 0,
-        '@typescript-eslint/no-unused-vars': 0,
+        '@typescript-eslint/no-empty-function': 1,
+        // 表达式 func&&func(), 可直接使用func?.()
         '@typescript-eslint/no-unused-expressions': 0,
         '@typescript-eslint/explicit-module-boundary-types': 0,
+        // hack
+        indent: 0,
+        '@typescript-eslint/indent': [
+            'error',
+            4,
+            {
+                ignoreComments: true,
+            },
+        ],
+        // TODO enum https://github.com/typescript-eslint/typescript-eslint/issues/2484
+        // "no-shadow": [2, { "builtinGlobals": true, "hoist": "all", "allow": [] }],
+        // "@typescript-eslint/no-shadow": [2, { "builtinGlobals": true, "hoist": "all", "allow": [] }],
     },
     settings: {
         react: {
