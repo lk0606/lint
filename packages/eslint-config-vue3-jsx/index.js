@@ -104,6 +104,7 @@ module.exports = {
         '@typescript-eslint/no-unused-expressions': 0,
         '@typescript-eslint/explicit-module-boundary-types': 0,
         // hack
+        // https://github.com/eslint/eslint/issues/13956
         indent: 0,
         '@typescript-eslint/indent': [
             'error',
