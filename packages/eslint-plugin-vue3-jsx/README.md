@@ -37,7 +37,8 @@ Then configure the rules you want to use under the rules section.
         "vue3-jsx/prefer-render-in-setup": 2,
         "vue3-jsx/component-name": 2,
         "vue3-jsx/no-directives": 2,
-        "vue3-jsx/no-reactivity-in-render": 2
+        "vue3-jsx/no-reactivity-in-render": 2,
+        "vue3-jsx/no-fragment-in-return-root": 2
     }
 }
 ```
