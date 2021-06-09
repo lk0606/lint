@@ -52,3 +52,4 @@ Then configure the rules you want to use under the rules section.
 -   [component-name](https://github.com/lk0606/lint/blob/master/packages/eslint-plugin-vue3-jsx/docs/rules/component-name.md)
 -   [no-directives](https://github.com/lk0606/lint/blob/master/packages/eslint-plugin-vue3-jsx/docs/rules/no-directives.md)
 -   [no-reactivity-in-render](https://github.com/lk0606/lint/blob/master/packages/eslint-plugin-vue3-jsx/docs/rules/no-reactivity-in-render.md)
+-   [no-fragment-in-return-root](https://github.com/lk0606/lint/blob/master/packages/eslint-plugin-vue3-jsx/docs/rules/no-fragment-in-return-root.md)
