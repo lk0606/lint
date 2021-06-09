@@ -8,5 +8,6 @@ module.exports = {
         'vue3-jsx/component-name': 2,
         'vue3-jsx/no-directives': 2,
         'vue3-jsx/no-reactivity-in-render': 2,
+        'vue3-jsx/no-fragment-in-return-root': 2,
     },
 }
