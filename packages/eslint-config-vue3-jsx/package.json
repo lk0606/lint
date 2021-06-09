@@ -1,6 +1,6 @@
 {
     "name": "eslint-config-vue3-jsx",
-    "version": "0.0.2-rc.1",
+    "version": "0.0.2-rc.2",
     "description": "Eslint config for vue3-jsx",
     "files": [
         "index.js",
@@ -18,7 +18,7 @@
     ],
     "dependencies": {
         "prettier": "^2.3.0",
-        "eslint-plugin-vue3-jsx": "0.0.3-beta.1",
+        "eslint-plugin-vue3-jsx": "^0.0.3-beta.3",
         "eslint": "^7.25.0",
         "@typescript-eslint/parser": "^4.22.0",
         "@typescript-eslint/eslint-plugin": "^4.22.0",
